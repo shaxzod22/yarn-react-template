@@ -42,6 +42,10 @@ const Contact = () => {
         localStorage.setItem('users',JSON.stringify(newData))
         setusers(newData)
     }
+    function delAll(){
+        setusers([])
+        localStorage.clear()
+    }
     let renderData = users.map((user,i)=>(
         <User key={i} {...user} deleteI={deleteI}/>
         ))
@@ -77,8 +81,8 @@ const Contact = () => {
             </form>
             
             <ul className="navbar__list">
-            <li className="navbar__item">All</li>
-            <li className="navbar__item navbar__item-active">Favourites</li>
+            <li className="navbar__item">All{`(${users.length})`}</li>
+            <li onClick={delAll} className="navbar__item navbar__item-active">Delete all</li>
             </ul>
             <div className="users__list">
             {renderData}
