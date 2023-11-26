@@ -142,17 +142,29 @@ body{
     color: #6C757D;
 }
 
-.delete{
+.btn__wrapper{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn{
     width: 60px;
     height: 30px;
     border: none;
-    background-color: red;
     color: white;
     font-size: 16px;
     border-radius: 8px;
     padding: 5px;
-    cursor: pointer;
+    cursor: pointer;  
 }
+
+.delete{
+        background-color: red;
+    }
+    .edit{
+        background-color: blueviolet;
+    }
 
 
 

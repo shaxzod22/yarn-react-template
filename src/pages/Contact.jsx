@@ -19,7 +19,7 @@ const Contact = () => {
         let phoneNumber = phoneInputRef.current.value.trim()
         if(firstname && phoneNumber){
             const newUser = {
-                id:new Date(),
+                id:new Date().getFullYear(),
                 firstname,
                 lastname,
                 phoneNumber,
@@ -46,8 +46,12 @@ const Contact = () => {
         setusers([])
         localStorage.clear()
     }
+    function edit(id){
+        console.log(id);
+        
+    }
     let renderData = users.map((user,i)=>(
-        <User key={i} {...user} deleteI={deleteI}/>
+        <User key={i} {...user} editI={edit} deleteI={deleteI}/>
         ))
 
         
