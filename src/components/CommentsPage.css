@@ -1,0 +1,32 @@
+.comments__list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 100px;
+}
+
+.comments__item{
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border-radius: 4px;
+    padding: 20px;
+}
+
+.comments__email{
+    color:#ff8c00;
+    margin-bottom:10px;
+    font-weight:bold;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.comments__name{
+    color: white;
+    font-weight: bolder;
+}
+
+.comments__overview{
+    font-style: italic;
+}

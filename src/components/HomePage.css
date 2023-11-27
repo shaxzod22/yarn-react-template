@@ -1,0 +1,120 @@
+.wave {
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -2.5em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+    25% {
+        transform: translateX(-25%);
+    }
+    50% {
+        transform: translateX(-50%);
+    }
+    75% {
+        transform: translateX(-25%);
+    }
+    100% {
+        transform: translateX(1);
+    }
+}
+.heading{
+    color: white;
+}
+
+.users__list{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 1380px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.user__item{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 330px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 12px;
+    min-height: 270px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.531);
+}
+
+.user__name{
+    color: #000000;
+    font-size: 24px;
+}
+
+.user__username{
+    color: white;
+    font-size: 19px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+.info{
+    margin-top: 5px;
+    font-size: 17px;
+}
+
+.btn__box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+    margin-top: auto ;
+    margin-bottom: 6px;
+    
+}
+
+.btn{
+    color: #FD8321;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.53);
+    border-radius: 3px;
+    text-decoration: none;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding: 8px 18px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s ease-out;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: aquamarine;
+    transform: translateY(-6px);
+}
