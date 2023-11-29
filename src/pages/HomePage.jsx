@@ -7,12 +7,14 @@ const HomePage = ()=>{
     let url = `https://restcountries.com/v3.1/all`
     const [countries,setCountries] = useState([])
     const [searchArr,setSearchArr] = useState(null) 
+    const [loading,setLoading] = useState(false)
     async function getData(url){
         try{
+            setLoading(true)
             const {data} = await axios(url)
             setCountries(data)
-        }catch{
-            console.log('a');
+        }finally{
+            setLoading(false)
         }
     }
     
@@ -33,10 +35,17 @@ const HomePage = ()=>{
             alert('To`ldirilmadi!')
         }
     }
+
+    if(loading){
+        
+    }
     
     return(
         <>
         <div className="container">
+            <div className="loading">
+            <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+            </div>
         <h1 className="heading">Countries</h1>
         <form onSubmit={submit} className="search__form">
         <input ref={inputRef} type="text" placeholder="Search country..." className="search__input" />
