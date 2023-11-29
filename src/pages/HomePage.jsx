@@ -37,15 +37,17 @@ const HomePage = ()=>{
     }
 
     if(loading){
-        
+        return(
+            <div className="loading">
+            <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+            </div>
+        )
     }
     
     return(
         <>
         <div className="container">
-            <div className="loading">
-            <div className="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-            </div>
+            
         <h1 className="heading">Countries</h1>
         <form onSubmit={submit} className="search__form">
         <input ref={inputRef} type="text" placeholder="Search country..." className="search__input" />
