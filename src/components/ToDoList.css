@@ -1,0 +1,113 @@
+.todos__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1240px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.todos__heading{
+    margin-bottom: 30px;
+}
+
+.todos__form{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.todos__work__input{
+    width: 480px;
+    height: 40px;
+    font-size: 18px;
+    padding-left: 10px;
+}
+.todos__work__input::placeholder{
+    font-style: italic;
+}
+
+.todos__time__input{
+    width: 120px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.todos__selection{
+    padding-left: 10px;
+    width: 180px;
+    height: 40px;
+    font-size: 18px;
+}
+
+.todos__submit__btn{
+    background-color: rgb(9, 172, 9);
+}
+
+.todos__list{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.todos__item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 850px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background-color: rgb(97, 247, 247);
+}
+
+.todos__workTitle__box{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.todos__title{
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: bolder;
+    letter-spacing: 0.5px;
+}
+
+.todos__time{
+    font-size: 18px;
+}
+
+.todos__status{
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.todos__btn__box{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.todos__btn{
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: none;
+    font-size: 17px;
+    outline: none;
+    font-weight: bolder;
+    cursor: pointer;
+    color: white;
+}
+
+.todos__delete__btn{
+    background-color: red;
+    
+}
+
+.todos__edit__btn{
+    background-color: rgb(32, 20, 125);
+}
