@@ -13,7 +13,7 @@ const HomePage = () => {
         async function getData(url){
             try{
                 const res = await axios(url)
-              
+                
                 setInfo(res.data)
             }catch{
                 console.log('a');
@@ -22,21 +22,16 @@ const HomePage = () => {
         getData(urlAll)
         
     },[urlAll])
+    
     console.log(info);
     return (
         <div className="container">
         <h1 className="heading">News</h1>
         
-        <ul className="news__list">
-        {info.map((el,index)=>(
-            <li key={index} className="news__item">
-            <Link to={`/${index+1}`}>a</Link>
-            </li>
-            ))}
-            </ul>
-            </div>
-            )
-        }
-        
-        export default HomePage
-        
+        <Link to='/jbsjb' >hju</Link>
+        </div>
+        )
+    }
+    
+    export default HomePage
+    
